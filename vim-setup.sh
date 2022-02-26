@@ -23,3 +23,22 @@ After downloading the files, we have to add the following lines in ~/.vimrc file
 
 set background=dark
 colorscheme PaperColor
+
+
+# Install Vim-Plug plugin 
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Add the following section in ~/.vimrc file
+
+" PLUGINS ---------------------------------------------------------------- {{{
+
+call plug#begin('~/.vim/plugged')
+
+
+
+
+call plug#end()
+
+" }}}
+

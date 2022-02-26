@@ -34,9 +34,11 @@ lastpass-cli
 lazydocker
 lazygit
 libassuan
+libcbor
 libev
 libevent
 libffi
+libfido2
 libgcrypt
 libgpg-error
 libiconv
@@ -49,6 +51,7 @@ libtasn1
 libtool
 libunistring
 libusb
+libuv
 libxml2
 libxmlsec1
 libxslt
@@ -64,6 +67,7 @@ mpfr
 mysql
 nettle
 nghttp2
+node
 npth
 oath-toolkit
 oniguruma
@@ -98,6 +102,7 @@ tflint
 tfswitch
 tree
 unbound
+wget
 xz
 zlib
 zsh-syntax-highlighting
