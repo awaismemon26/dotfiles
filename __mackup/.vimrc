@@ -1,4 +1,4 @@
-" Set compatibility to Vim only instead of vi
+" Test - Set compatibility to Vim only instead of vi
 set nocompatible
 
 " Automatically wrap text that extents beyond the screen length
@@ -71,7 +71,6 @@ set tabstop=4
 
 " Use space characters instead of tabs.
 set expandtab
-
 
 " PLUGINS ---------------------------------------------------------------- {{{
 
