@@ -1,0 +1,75 @@
+{
+  "lastUpgradeScriptRun": "v8.0.0",
+  "appId": "8149453d12fde3c987f5ceb011360abe56307d17",
+  "sslWhitelist": [],
+  "lastVersion": "8.1.1",
+  "lastReleaseNotesDisplayed": "8.1.1",
+  "suspiciousSshKeys": [],
+  "registration": {
+    "email": "awaismemon26@gmail.com",
+    "name": "Awais Memon",
+    "status": null,
+    "loginType": "github",
+    "date": "2021-11-29T14:13:46.978Z",
+    "EULA": {
+      "version": "7.5.0",
+      "status": "agree_verified"
+    }
+  },
+  "userId": null,
+  "licensedFeatures": [],
+  "userFeatures": [
+    {
+      "name": "gitkraken"
+    },
+    {
+      "name": "glo"
+    },
+    {
+      "name": "timelines"
+    },
+    {
+      "name": "cli"
+    },
+    {
+      "name": "activityStatus"
+    }
+  ],
+  "hasSeenNewUserOnboarding": true,
+  "hasSeenTrialStartedModal": true,
+  "windowSettings": {
+    "fullScreen": false,
+    "maximized": true
+  },
+  "fuzzyFinderMetadata": {
+    "itemMetadata": {
+      "OPEN_REPO": {
+        "openRepo-/Users/awaismemon/Documents/p7s1/terraform-modules": {
+          "id": "openRepo-/Users/awaismemon/Documents/p7s1/terraform-modules",
+          "timestamps": [
+            1638195296440
+          ],
+          "total": 1
+        }
+      }
+    }
+  },
+  "repoDeepLinkMap": {
+    "0a8a55034234ce585b2ec74638653daea134697d": {
+      "paths": [
+        "/Users/awaismemon/Documents/p7s1/terraform-modules/"
+      ],
+      "pullUrls": {
+        "git@github.com:endocode/terraform-modules.git": {
+          "paths": [
+            "/Users/awaismemon/Documents/p7s1/terraform-modules/"
+          ],
+          "name": "terraform-modules",
+          "hostName": "github.com",
+          "owner": "endocode",
+          "hostingServiceType": "github"
+        }
+      }
+    }
+  }
+}

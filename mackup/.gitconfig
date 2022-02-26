@@ -1,0 +1,13 @@
+[user]
+	name = Awais Memon
+	email = awaismemon26@gmail.com
+[merge]
+	tool = opendiff
+[diff]
+	tool = vscode
+[difftool]
+	prompt = false
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[core]
+	editor = code --wait

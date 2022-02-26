@@ -1,0 +1,89 @@
+{
+  "pullRequests": {
+    "filters": [
+      {
+        "id": "5b5371de-903e-4e27-a1c4-e74936e98e63",
+        "filter": "author:awaismemon26",
+        "name": "My Pull Requests",
+        "author": [
+          {
+            "not": false,
+            "values": [
+              "awaismemon26"
+            ]
+          }
+        ],
+        "in": [
+          {
+            "not": false,
+            "values": [
+              "title",
+              "body"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6d351b74-3e91-4487-a439-7750e2e25c83",
+        "filter": "assignee:awaismemon26",
+        "name": "Assigned To Me",
+        "assignee": [
+          {
+            "not": false,
+            "values": [
+              "awaismemon26"
+            ]
+          }
+        ],
+        "in": [
+          {
+            "not": false,
+            "values": [
+              "title",
+              "body"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "0c84bfdf-a146-45f1-a2f4-111fbd611cfc",
+        "filter": "review-requested:awaismemon26",
+        "name": "Awaiting My Review",
+        "review-requested": [
+          {
+            "not": false,
+            "values": [
+              "awaismemon26"
+            ]
+          }
+        ],
+        "in": [
+          {
+            "not": false,
+            "values": [
+              "title",
+              "body"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "51350bed-a8b5-4168-8c74-3650a5e69ef6",
+        "filter": "",
+        "name": "All Pull Requests",
+        "in": [
+          {
+            "not": false,
+            "values": [
+              "title",
+              "body"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "teams": {
+    "hasFinishedSettingUpTeams": true
+  }
+}
