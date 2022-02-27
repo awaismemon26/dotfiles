@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-# This file will be importing the following configurations from 
-
 
 # If you get a error in this script, stop executing the script instantly while having non-zero status
 set -e

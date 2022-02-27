@@ -2,10 +2,6 @@
 .SILENT: export
 export: 
 	./export-config.zsh
-	
-
-.PHONY: Import config dotfiles from git and place it in home directory
-.SILENT: link
 
 
 .PHONY: Installing Xcode and Homebrew
@@ -13,7 +9,12 @@ export:
 init: 
 	./bootstrap.zsh
 
-.PHONY: Creating Symlinks 
-.SILENT: symlinks
-symlinks:
+.PHONY: Creating Symlinks to home directory from dotfiles git
+.SILENT: link
+link:
 	./symlinks.zsh
+
+.PHONY: Removing Symlinks
+.SILENT: unlink
+unlink: 
+	./remove-symlinks.zsh

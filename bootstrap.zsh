@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # Setup script for setting up a new MAC OS machine
 
+# If you get a error in this script, stop executing the script instantly while having non-zero status
 set -e
 
 DOTDIR="$(

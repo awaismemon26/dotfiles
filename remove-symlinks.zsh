@@ -13,13 +13,13 @@ DOTDIR="$(
 
 source "${DOTDIR}"/utils/*.zsh
 
-green "Creating Symlinks -> Dotfiles: ${DOTDIR} -> ~/"
+green "Removing Symlinks -> Dotfiles: ${DOTDIR} -> ~/"
 
 magenta "ZSH config files"
 (
     # More details on operations performed
     set -x                              
-    stow zsh --adopt 
+    stow -D zsh
 #    ln -sf "${DOTDIR}"/zsh/.zshrc ~/.zshrc
 #    ln -sf "${DOTDIR}"/zsh/.p10k.zsh ~/.p10k.zsh
 #    ln -sf "${DOTDIR}"/zsh/.functions ~/.functions
@@ -31,14 +31,14 @@ magenta "Git config files"
 (
 
     set -x
-    stow git --adopt
+    stow -D git
     #ln -sf "${DOTDIR}"/git/.gitconfig ~/.gitconfig
 )
 
 magenta "Vim config files"
 (
     set -x
-    stow vim --adopt
+    stow -D vim
     #ln -sf "${DOTDIR}"/vim/.vimrc ~/.vimrc
     #stow
 #    ln -sf "${DOTDIR}"/vim/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
