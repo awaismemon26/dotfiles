@@ -60,6 +60,7 @@ libzip
 lz4
 lzip
 m4
+mackup
 make
 minikube
 mpdecimal
@@ -94,6 +95,7 @@ rtmpdump
 six
 sk
 sqlite
+stow
 terraform
 terraform-docs
 terrascan

@@ -72,7 +72,6 @@ set tabstop=4
 " Use space characters instead of tabs.
 set expandtab
 
-
 " PLUGINS ---------------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
