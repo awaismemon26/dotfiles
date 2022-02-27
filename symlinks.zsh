@@ -17,7 +17,6 @@ green "Creating Symlinks -> Dotfiles: ${DOTDIR} -> ~/"
 
 magenta "ZSH config files"
 (
-    # More details on operations performed
     set -x                              
     stow zsh --adopt 
 #    ln -sf "${DOTDIR}"/zsh/.zshrc ~/.zshrc
@@ -26,22 +25,19 @@ magenta "ZSH config files"
 #    ln -sf "${DOTDIR}"/zsh/.aliases ~/.aliases
 
 )
-
 magenta "Git config files"
 (
-
     set -x
     stow git --adopt
-    #ln -sf "${DOTDIR}"/git/.gitconfig ~/.gitconfig
 )
-
 magenta "Vim config files"
 (
     set -x
     stow vim --adopt
-    #ln -sf "${DOTDIR}"/vim/.vimrc ~/.vimrc
-    #stow
-#    ln -sf "${DOTDIR}"/vim/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
-#    ln -sf "${DOTDIR}"/vim/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
-
+)
+magenta "VSCode config files"
+(
+    set -x
+    stow vscode --adopt
+    ln -sf "$DOTDIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 )

@@ -5,8 +5,8 @@ export:
 
 
 .PHONY: Installing Xcode and Homebrew
-.SILENT: init
-init: 
+.SILENT: install
+install: 
 	./bootstrap.zsh
 
 .PHONY: Creating Symlinks to home directory from dotfiles git
