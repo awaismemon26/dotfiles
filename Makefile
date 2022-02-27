@@ -1,4 +1,4 @@
 .PHONY: import
 .SILENT: import
-import: 
-	./import.zsh
+export: 
+	./export-config.zsh

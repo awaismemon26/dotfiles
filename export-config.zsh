@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# This file will be importing the following configurations from 
+
+
 # If you get a error in this script, stop executing the script instantly while having non-zero status
 set -e
 
@@ -17,7 +20,7 @@ green "Dotfiles path: ${DOTDIR}"
 
 magenta "zsh"
 (
-    set -x
+    set -x                              # It is like verbose, this will show more details on operations performed with the following commands
     cp ~/.zshrc "${DOTDIR}"/zsh
     cp ~/.p10k.zsh "${DOTDIR}"/zsh
 
