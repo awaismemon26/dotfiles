@@ -1,5 +1,14 @@
 `.dotfiles
 
+# Steps to setup my Mac
+
+1. Install XCode Tools
+
+xcode-select --install
+
+2. Install Brew 
+ 
+
 
 # Hammerspoon
 
