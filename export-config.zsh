@@ -40,11 +40,18 @@ magenta "Git"
 
 )
 
-magenta "Brew"
+magenta "Brewfile dump"
+(
+    set -x
+    brew bundle dump --describe -f --file="${DOTDIR}"/Brewfile    
+)
+
+magenta "Brew casks and formulae"
 (
     set -x
     brew list --cask > "${DOTDIR}"/brew/casks.txt
     brew list --formulae > "${DOTDIR}"/brew/formulae.txt
+
 )
 
 green "git status"
