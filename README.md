@@ -1,4 +1,4 @@
-# My `.dotfiles
+# My `.dotfiles`
 
 ## Steps for setting up MacOS
 
@@ -10,7 +10,9 @@
 
 4. Install Brew packages using Brewfile 
 
-5. Create symlinks for all `.config` files
+5. Create symlinks for all `.config` files using stow
+
+## 
 
  
 

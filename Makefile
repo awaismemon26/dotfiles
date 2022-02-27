@@ -12,3 +12,8 @@ export:
 .SILENT: init
 init: 
 	./bootstrap.zsh
+
+.PHONY: Creating Symlinks 
+.SILENT: symlinks
+symlinks:
+	./symlinks.zsh
