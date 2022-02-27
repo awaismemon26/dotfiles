@@ -1,12 +1,17 @@
-`.dotfiles
+# My `.dotfiles
 
-# Steps to setup my Mac
+## Steps for setting up MacOS
 
 1. Install XCode Tools
 
-xcode-select --install
+2. Install Brew, if not available 
 
-2. Install Brew 
+3. Update Brew
+
+4. Install Brew packages using Brewfile 
+
+5. Create symlinks for all `.config` files
+
  
 
 
