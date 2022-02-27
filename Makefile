@@ -6,3 +6,9 @@ export:
 
 .PHONY: Import config dotfiles from git and place it in home directory
 .SILENT: link
+
+
+.PHONY: Installing Xcode and Homebrew
+.SILENT: init
+init: 
+	./bootstrap.zsh

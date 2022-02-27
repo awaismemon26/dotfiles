@@ -23,6 +23,8 @@ magenta "zsh"
     set -x                              # It is like verbose, this will show more details on operations performed with the following commands
     cp ~/.zshrc "${DOTDIR}"/zsh
     cp ~/.p10k.zsh "${DOTDIR}"/zsh
+    cp ~/.functions "${DOTDIR}"/zsh
+    cp ~/.aliases "${DOTDIR}"/zsh
 
 )
 
