@@ -57,13 +57,22 @@ magenta "Installing Homebrew bundle using brewfile"
 
 magenta "Installing ZSH Autosuggestion Plugin"
 (
-    set -x
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    
+    read "?Would you like to install zsh autosuggestion plugin? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    else
+        echo "ZSH Autosuggestion plugin installation skipped"
+    fi
 
 )
 
 magenta "Installing ZSH Syntax Highlighting Plugin"
 (
-    set -x
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    read "?Would you like to install zsh syntax highlighter plugin ? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    else
+        echo "ZSH Syntax Highlighter Plugin installation skipped"
+    fi
 )
