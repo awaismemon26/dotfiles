@@ -21,11 +21,11 @@ green "Dotfile path: ${DOTDIR}"
 #    sudo xcodebuild -license
 #)
 
-magenta "Installing XCode CLI"
-(
-    set -x
-    xcode-select —-install
-)
+#magenta "Installing XCode CLI"
+#(
+#    set -x
+#    xcode-select —-install
+#)
 
 magenta "Installing Homebrew"
 (
@@ -35,18 +35,23 @@ magenta "Installing Homebrew"
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 )
-
 magenta "Update HomeBrew"
 (
     set -x
     brew update
 )
-
-
 magenta "Installing Homebrew bundle using brewfile"
 (
     set -x
+
+    read -p "Would you like to install all brew packages ? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
     brew bundle install --file=${DOTDIR}/Brewfile
+)
+magenta "Installing ZSH Autosuggestion Plugin"
+(
+    set -x
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 )
 
 
