@@ -61,3 +61,9 @@ magenta "Installing ZSH Autosuggestion Plugin"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 )
+
+magenta "Installing ZSH Syntax Highlighting Plugin"
+(
+    set -x
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+)
