@@ -20,28 +20,22 @@ magenta "ZSH config files"
     # More details on operations performed
     set -x                              
     stow -D zsh
-#    ln -sf "${DOTDIR}"/zsh/.zshrc ~/.zshrc
-#    ln -sf "${DOTDIR}"/zsh/.p10k.zsh ~/.p10k.zsh
-#    ln -sf "${DOTDIR}"/zsh/.functions ~/.functions
-#    ln -sf "${DOTDIR}"/zsh/.aliases ~/.aliases
-
 )
 
 magenta "Git config files"
 (
-
     set -x
     stow -D git
-    #ln -sf "${DOTDIR}"/git/.gitconfig ~/.gitconfig
 )
 
 magenta "Vim config files"
 (
     set -x
     stow -D vim
-    #ln -sf "${DOTDIR}"/vim/.vimrc ~/.vimrc
-    #stow
-#    ln -sf "${DOTDIR}"/vim/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
-#    ln -sf "${DOTDIR}"/vim/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
-
+)
+magenta "VSCode config files"
+(
+    set -x
+    stow -D vscode 
+    unlink "$HOME/Library/Application Support/Code/User/settings.json"
 )
