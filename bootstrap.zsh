@@ -29,7 +29,6 @@ green "Dotfile path: ${DOTDIR}"
 
 magenta "Installing Homebrew"
 (
-    set -x
     if test ! $(which brew); then
         echo "Homebrew not present, downloading and installing..."
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -38,16 +37,22 @@ magenta "Installing Homebrew"
 
 magenta "Update HomeBrew"
 (
-    set -x
-    brew update
+    read  "?Would you like to update brew ? (Y/N):? " confirm
+    if [[ $confirm == "y" ]]; then
+        brew update
+    else
+       echo "Brew update skipped" 
+    fi
 )
 
 magenta "Installing Homebrew bundle using brewfile"
 (
-    set -x
-
-    read -p "Would you like to install all brew packages ? (Y/N): " confirm 
-    if [ $confirm == [yY]]; then brew bundle install --file=${DOTDIR}/Brewfile; else echo "Brew package installation skipped"
+    read "?Would you like to install all brew packages ? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        brew bundle install --file=${DOTDIR}/Brewfile; 
+    else 
+        echo "Brew package installation skipped"
+    fi
 )
 
 magenta "Installing ZSH Autosuggestion Plugin"
