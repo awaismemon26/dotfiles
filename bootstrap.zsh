@@ -5,7 +5,7 @@
 set -e
 
 DOTDIR="$(
-      cd ~/.dotfiles "$(dirname "$0")" >/dev/null 2>&1 || exit
+      cd ~/dotfiles "$(dirname "$0")" >/dev/null 2>&1 || exit
       pwd -P
 )"
 
@@ -35,23 +35,24 @@ magenta "Installing Homebrew"
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 )
+
 magenta "Update HomeBrew"
 (
     set -x
     brew update
 )
+
 magenta "Installing Homebrew bundle using brewfile"
 (
     set -x
 
-    read -p "Would you like to install all brew packages ? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-    brew bundle install --file=${DOTDIR}/Brewfile
+    read -p "Would you like to install all brew packages ? (Y/N): " confirm 
+    if [ $confirm == [yY]]; then brew bundle install --file=${DOTDIR}/Brewfile; else echo "Brew package installation skipped"
 )
+
 magenta "Installing ZSH Autosuggestion Plugin"
 (
     set -x
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 )
-
-
