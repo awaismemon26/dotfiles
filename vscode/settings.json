@@ -2,11 +2,16 @@
     "workbench.iconTheme": "vscode-icons",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "kite.showWelcomeNotificationOnStartup": false,
-    "tabnine.experimentalAutoImports": false,
     "editor.accessibilitySupport": "off",
     "git.autofetch": true,
     "redhat.telemetry.enabled": true,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.colorTheme": "Default Light+",
+    "editor.fontFamily": "Monaco, Menlo, monospace, 'Courier New', cascadia code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        120
+    ],
     "window.zoomLevel": 1
 }
