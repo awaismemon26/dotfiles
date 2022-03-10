@@ -13,5 +13,8 @@
     "editor.rulers": [
         120
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    },
     "window.zoomLevel": 1
 }
