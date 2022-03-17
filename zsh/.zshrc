@@ -88,7 +88,7 @@ DEFAULT_USER=$(whoami)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git virtualenv zsh-autosuggestions zsh-syntax-highlighting web-search copypath copyfile jsontools copybuffer)
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time terraform_version)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time terraform_version)
 
 # User configuration
 
