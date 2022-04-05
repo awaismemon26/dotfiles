@@ -193,3 +193,4 @@ source $ZSH/oh-my-zsh.sh
 #                                                  KUBECTL PLUGIN (KREW)
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+export GPG_TTY=$(tty)

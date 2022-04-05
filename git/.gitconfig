@@ -1,6 +1,7 @@
 [user]
 	name = Awais Memon
 	email = awaismemon26@gmail.com
+	signingkey = 4C866CDFFECB83A4C5B1DC7D59EC3FD1B62807CE
 [merge]
 	tool = opendiff
 [diff]
@@ -11,3 +12,7 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [core]
 	editor = code --wait
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
