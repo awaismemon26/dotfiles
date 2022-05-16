@@ -15,5 +15,21 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.markdownlint": true
     },
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Light+",
+    "opa.path": "/Users/awaismemon/opa",
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "type": "line",
+            "iconColour": "orange",
+            "foreground": "orange"
+        },
+        "FIXME": {
+            "type": "line",
+            "icon": "beaker",
+            "foreground": "red",
+            "iconColour": "red",
+            "gutterIcon": true
+        }
+    }
 }
