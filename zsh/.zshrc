@@ -86,9 +86,9 @@ DEFAULT_USER=$(whoami)
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv zsh-autosuggestions zsh-syntax-highlighting web-search copypath copyfile jsontools copybuffer)
+plugins=(git virtualenv zsh-autosuggestions zsh-syntax-highlighting copypath copyfile jsontools copybuffer)
 
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time terraform_version)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time terraform_version)
 
 # User configuration
 
@@ -188,6 +188,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 #####################################################################################################
 #                                                  KUBECTL PLUGIN (KREW)
