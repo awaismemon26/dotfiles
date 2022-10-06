@@ -10,3 +10,6 @@ alias tf="terraform"
 
 # Git
 alias gitfilesearchincommits="git log --all --full-history --"
+
+# testing image
+alias kubectlshell="kubectl run -i --tty --rm --image praqma/network-multitool test-shell -- /bin/bash"

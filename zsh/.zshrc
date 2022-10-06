@@ -86,9 +86,16 @@ DEFAULT_USER=$(whoami)
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv zsh-autosuggestions zsh-syntax-highlighting copypath copyfile jsontools copybuffer)
+#
+# PLUGINS USAGE
+# sudo -- press ESC key double times and you will recieve the last command that you run with sudo 
+# copypath -- copy complete path to clipboard
+# copyfile -- copy contents of a file to clipboard
+# copybuffer - control + o will copy current command on terminal to your clipboard
+# dirhistory -- you can navigate directories by pressing 
+plugins=(macos git virtualenv zsh-autosuggestions zsh-syntax-highlighting kubectl sudo copypath copyfile copybuffer dirhistory)
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time terraform_version)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status background_jobs)
 
 # User configuration
 
@@ -129,7 +136,7 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.in
 autoload -U compinit compdef
 compinit
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 
 
@@ -196,3 +203,9 @@ export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 export PATH="${PATH}:${HOME}/.krew/bin"
 
 export GPG_TTY=$(tty)
+
+########################################## LINKERD #############################################
+export PATH=$PATH:/Users/awaismemon/.linkerd2/bin
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
