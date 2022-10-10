@@ -1,0 +1,43 @@
+# The settings in each Host section are applied to any Git SSH remote URL with a matching hostname
+
+# Generally, *SSH uses the first matching line for each parameter name, e.g. if there's multiple values for a parameter across multiple matching Host sections
+
+# * "IdentitiesOnly yes" prevents keys cached in ssh-agent from being tried before the IdentityFile values we explicitly set
+
+# If you need different keys for different organizations you'll need to use host aliases to create separate Host sections. This is because all hosted Azure DevOps URLs have the same hostname (ssh.dev.azure.com), so SSH has no way to distinguish them by default
+
+# Imagine that we have the following two SSH URLs
+
+# *git@ssh.dev.azure.com:v3/Parsifal-GCP/Parsifal%20GCP/parsifal_teraform
+
+# For this, we want to use `parsifalkey`, so we'll create `devops_parsifal` as a Host alias and tell SSH to use `parsifalkey`
+
+# To set explicit keys for the two host aliases and to tell SSH to use the correct actual hostname, add the next two Host sections
+
+Host devops_parsifal
+HostName ssh.dev.azure.com
+AddKeysToAgent yes
+UseKeychain yes
+IdentityFile ~/.ssh/azure_g2k
+User awais.memon.ext@g2k-group.com
+IdentitiesOnly yes
+
+Host devops_awais95
+HostName ssh.dev.azure.com
+AddKeysToAgent yes
+UseKeychain yes
+IdentityFile ~/.ssh/azure_devops_awais95
+User awaismemon95@yahoo.com
+IdentitiesOnly yes
+
+Host *
+IdentitiesOnly yes
+LogLevel INFO
+AddressFamily inet
+#PreferredAuthentications=publickey
+# Then, instead of using the real URLs, tell Git you want to use these URLs
+
+# *git@devops_fabrikam:v3/Fabrikam/Project1/fab_repo
+
+# * git@devops_contoso:v3/Contoso/Project2/con_repo
+# At the end of the file, you can put global defaults for other SSH hosts you may connect to.  Note that "*" also matches any hosts that match the sections above, and remember that SSH uses the first matching line for each parameter name
