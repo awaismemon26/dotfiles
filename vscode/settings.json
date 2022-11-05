@@ -1,12 +1,12 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
     "kite.showWelcomeNotificationOnStartup": false,
     "editor.accessibilitySupport": "off",
     "git.autofetch": true,
     "redhat.telemetry.enabled": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.fontFamily": "Monaco, Menlo, monospace, 'Courier New', cascadia code",
+    "editor.fontFamily": "Hack Nerd Font",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
     "editor.rulers": [
@@ -31,5 +31,6 @@
         }
     },
     "workbench.colorTheme": "Visual Studio 2019 Light",
+    "debug.terminal.clearBeforeReusing": true,
     "window.zoomLevel": 1
 }
