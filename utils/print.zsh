@@ -17,23 +17,30 @@ function title() {
     printf '*%.0s' {1..$(expr ${#2} + 4)}
     printf "${NOCOLOR}\n\n"
 }
+function text() {
+    printf "${1}"
+}
 
-function red() {
+function red_title() {
     title "${RED}" "${1}"
 }
 
-function green() {
+function green_title() {
     title "${GREEN}" "${1}"
 }
 
-function yellow() {
+function yellow_title() {
     title "${YELLOW}" "${1}"
 }
 
-function blue() {
+function blue_title() {
     title "${BLUE}" "${1}"
 }
 
-function magenta() {
+function magenta_title() {
     title "${MAGENTA}" "${1}"
+}
+
+function yellow_text() {
+    text "${YELLOW}" "${1}"
 }

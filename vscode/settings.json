@@ -30,7 +30,10 @@
             "gutterIcon": true
         }
     },
-    "workbench.colorTheme": "Visual Studio 2019 Light",
+    "workbench.colorTheme": "Monokai",
     "debug.terminal.clearBeforeReusing": true,
-    "window.zoomLevel": 1
+    "githubPullRequests.pullBranch": "never",
+    "terminal.integrated.scrollback": 10000000000,
+    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": false
 }

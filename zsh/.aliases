@@ -8,6 +8,9 @@ alias home="cd ~"
 # terraform
 alias tf="terraform"
 
+# terragrunt
+alias tg="terragrunt"
+
 # Git
 alias gitfilesearchincommits="git log --all --full-history --"
 
