@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/awaismemon/Documents/projects/python-sql-backup-s3'
+let g:netrw_dirhist_6='/Users/awaismemon/Documents/projects/python-sql-backup-s3/README.md'
+let g:netrw_dirhist_5='/Users/awaismemon/Documents/projects/python-sql-backup-s3'
+let g:netrw_dirhist_4='/Users/awaismemon/Documents/projects/python-sql-backup-s3/README.md'
+let g:netrw_dirhist_3='/private/etc/ssh/sshd_config.d'
 let g:netrw_dirhist_2='/Users/awaismemon/.dotfiles/zsh'
 let g:netrw_dirhist_1='/Users/awaismemon/Documents/dotfiles/mackup/.vim'

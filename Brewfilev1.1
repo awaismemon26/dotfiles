@@ -4,7 +4,6 @@ tap "googlecontainertools/kpt", "https://github.com/GoogleContainerTools/kpt.git
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -31,14 +30,10 @@ brew "conftest"
 brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
 # View disk space usage and delete unwanted data, fast
 brew "dua-cli"
 # Modern replacement for 'ls'
 brew "exa"
-# Libraries to talk to Microsoft SQL Server and Sybase databases
-brew "freetds"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -97,10 +92,6 @@ brew "lazygit"
 brew "libfido2"
 # Conversion library
 brew "libiconv"
-# Postgres C API library
-brew "libpq"
-# GNOME XML library
-brew "libxml2"
 # XML security library
 brew "libxmlsec1"
 # C XSLT library for GNOME
@@ -113,8 +104,6 @@ brew "mackup"
 brew "make"
 # Run a Kubernetes cluster locally
 brew "minikube"
-# Platform built on V8 to build network applications
-brew "node@16"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # 'traceroute' and 'ping' in a single tool
@@ -135,8 +124,6 @@ brew "pass-otp"
 brew "php"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Object-relational database system
-brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Python version management
@@ -155,16 +142,12 @@ brew "stow"
 brew "telnet"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
-# Thin wrapper for Terraform e.g. for locking state
-brew "terragrunt"
 # Detect compliance and security violations across Infrastructure as Code
 brew "terrascan"
 # Linter for Terraform files
 brew "tflint"
 # Static analysis security scanner for your terraform code
 brew "tfsec"
-# Update version constraints in your Terraform configurations
-brew "tfupdate"
 # Simplified and community-driven man pages
 brew "tldr"
 # Internet file retriever
@@ -177,6 +160,8 @@ brew "env0/terratag/terratag"
 brew "googlecontainertools/kpt/kpt"
 # Terraform
 brew "hashicorp/tap/terraform", link: false
+# Update version constraints in your Terraform configurations
+brew "minamijoyo/tfupdate/tfupdate"
 # The tfswitch command lets you switch between terraform versions.
 brew "warrensbox/tap/tfswitch"
 # Prebuilt OpenJDK binaries
@@ -187,8 +172,6 @@ cask "alfred"
 cask "alt-tab"
 # Memory training application
 cask "anki"
-# Allows connection to a computer remotely
-cask "anydesk"
 # Two-factor authentication software
 cask "authy"
 # Data management tool that enables working with SQL Server
@@ -209,8 +192,6 @@ cask "disk-drill"
 cask "docker"
 # Web browser
 cask "firefox"
-# Developer targeted fonts with a high number of glyphs
-cask "font-hack-nerd-font"
 # Git client focusing on productivity
 cask "gitkraken"
 # Web browser
@@ -225,8 +206,6 @@ cask "iterm2"
 cask "lastpass"
 # Kubernetes IDE
 cask "lens"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
 # Molecular evolution statistical analysis and construction of phylogenetic trees
 cask "mega"
 # Meet, chat, call, and collaborate in just one place
@@ -245,8 +224,6 @@ cask "numi"
 cask "openconnect-gui"
 # Client program for the OpenVPN Access Server
 cask "openvpn-connect"
-# Administration and development platform for PostgreSQL
-cask "pgadmin4"
 # Command-line shell and scripting language
 cask "powershell"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -259,6 +236,8 @@ cask "spotify"
 cask "sublime-text"
 # Development environment
 cask "vagrant"
+# Virtualizer for x86 hardware
+cask "virtualbox"
 # Open-source code editor
 cask "visual-studio-code"
 # Network protocol analyzer

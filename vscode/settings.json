@@ -34,6 +34,9 @@
     "debug.terminal.clearBeforeReusing": true,
     "githubPullRequests.pullBranch": "never",
     "terminal.integrated.scrollback": 10000000000,
-    "window.zoomLevel": 1,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 1
 }
