@@ -23,7 +23,6 @@ magenta "ZSH config files"
 #    ln -sf "${DOTDIR}"/zsh/.p10k.zsh ~/.p10k.zsh
 #    ln -sf "${DOTDIR}"/zsh/.functions ~/.functions
 #    ln -sf "${DOTDIR}"/zsh/.aliases ~/.aliases
-
 )
 magenta "Git config files"
 (
@@ -34,6 +33,11 @@ magenta "Vim config files"
 (
     set -x
     stow vim --adopt
+)
+magenta "SSH config"
+(
+    set -x
+    stow ssh --adopt
 )
 magenta "VSCode config files"
 (
