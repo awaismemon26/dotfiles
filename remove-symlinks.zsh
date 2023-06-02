@@ -36,6 +36,6 @@ magenta "Vim config files"
 magenta "VSCode config files"
 (
     set -x
-    stow -D vscode 
+    # stow -D vscode 
     unlink "$HOME/Library/Application Support/Code/User/settings.json"
 )

@@ -27,7 +27,7 @@ magenta "ZSH config files"
 magenta "Git config files"
 (
     set -x
-    stow git --adopt
+    stow --ignore .DS_Store -R git --adopt
 )
 magenta "Vim config files"
 (
@@ -42,6 +42,10 @@ magenta "SSH config"
 magenta "VSCode config files"
 (
     set -x
-    stow vscode --adopt
+    # stow vscode --adopt
+    
+    if [[ ! -e "$HOME/Library/Application Support/Code/User/settings.json" ]]; then
+        touch $HOME/Library/Application Support/Code/User/settings.json
+    fi
     ln -sf "$DOTDIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 )

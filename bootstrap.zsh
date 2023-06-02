@@ -29,9 +29,11 @@ green "Dotfile path: ${DOTDIR}"
 
 magenta "Installing Homebrew"
 (
-    if test ! $(which brew); then
+    if [[ $(command -v brew) == "" ]]; then
         echo "Homebrew not present, downloading and installing..."
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    else
+        echo "Homebrew already present, skipping installation"
     fi
 )
 
@@ -49,9 +51,19 @@ magenta "Installing Homebrew bundle using brewfile"
 (
     read "?Would you like to install all brew packages ? (Y/N):?" confirm 
     if [[ $confirm == [yY] ]]; then
-        brew bundle install --file=${DOTDIR}/Brewfile; 
+        brew bundle install --file=${DOTDIR}/brew/Brewfile; 
     else 
         echo "Brew package installation skipped"
+    fi
+)
+
+magenta "Installing Oh My ZSH"
+(
+    if [ -d ~/.oh-my-zsh ]; then
+        echo "Oh My ZSH already present, skipping installation..."
+    else
+        echo "Oh My ZSH not present, downloading and installing..."
+        export RUNZSH="no" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     fi
 )
 
@@ -74,5 +86,34 @@ magenta "Installing ZSH Syntax Highlighting Plugin"
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     else
         echo "ZSH Syntax Highlighter Plugin installation skipped"
+    fi
+)
+
+magenta "Installing ZSH PowerLevel10k Theme"
+(
+    read "?Would you like to install zsh powerlevel10k theme? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    else
+        echo "ZSH PowerLevel10k Theme installation skipped"
+    fi
+)
+
+magenta "Initializing VIM Setup"
+(
+    read "?Would you like to install Color themes for VIM? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        sh -c "$(curl -o ${VIM_COLORS:-$HOME/.vim/colors}/PaperColor.vim https://raw.githubusercontent.com/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim)"
+        sh -c "$(curl -o ${VIM_COLORS:-$HOME/.vim/colors}/monokai.vim https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim)"
+        sh -c "$(curl -o ${VIM_COLORS:-$HOME/.vim/colors}/molokai.vim https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim)"
+    else
+        echo "VIM Color Theme installation skipped"
+    fi
+
+    read "?Would you like to install Plugins for VIM? (Y/N):?" confirm 
+    if [[ $confirm == [yY] ]]; then
+        sh -c "$(curl -o ${VIM_AUTOLOAD:-$HOME/.vim/autoload}/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)"
+    else
+        echo "VIM Plugin installation skipped"
     fi
 )
