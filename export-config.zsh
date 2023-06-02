@@ -14,9 +14,9 @@ DOTDIR="$(
 
 source "${DOTDIR}"/utils/*.zsh
 
-green_title "Dotfiles path: ${DOTDIR}"
+green "Dotfiles path: ${DOTDIR}"
 
-magenta_title "zsh"
+magenta "zsh"
 (
     files=("$HOME/.zshrc" "$HOME/.p10k.zsh" "$HOME/.aliases")
     for file in "${files[@]}"; do
@@ -31,7 +31,7 @@ magenta_title "zsh"
     done
 )
 
-magenta_title "Vim"
+magenta "Vim"
 (
     files=("$HOME/.vimrc" "$HOME/.vim")
     for file in "${files[@]}"; do
@@ -46,7 +46,7 @@ magenta_title "Vim"
     done
 )
 
-magenta_title "Git"
+magenta "Git"
 (
     files=("$HOME/.gitconfig")
     for file in "${files[@]}"; do
@@ -62,7 +62,7 @@ magenta_title "Git"
 
 )
 
-magenta_title "vscode"
+magenta "vscode"
 (   
     # Check if a symbolic link already exists
     if [[ -L "$HOME/Library/Application Support/Code/User/settings.json" ]]; then
@@ -73,7 +73,7 @@ magenta_title "vscode"
     fi
 )
 
-magenta_title "ssh"
+magenta "ssh"
 (
     read "?Would you like to export SSH config file? (Y/N):?" confirm 
     if [[ $confirm == [yY] ]]; then
@@ -88,13 +88,13 @@ magenta_title "ssh"
     fi
 )
 
-magenta_title "Brewfile dump"
+magenta "Brewfile dump"
 (
     set -x
     brew bundle dump --describe -f --file="${DOTDIR}"/brew/Brewfile    
 )
 
-magenta_title "Brew casks and formulae"
+magenta "Brew casks and formulae"
 (
     set -x
     brew list --cask > "${DOTDIR}"/brew/casks.txt
@@ -102,13 +102,13 @@ magenta_title "Brew casks and formulae"
 
 )
 
-green_title "git status"
+green "git status"
 (
     set -x
     git -C "${DOTDIR}" status
 )
 
-green_title "git diff"
+green "git diff"
 (
     set -x
     git -C "${DOTDIR}" --no-pager diff

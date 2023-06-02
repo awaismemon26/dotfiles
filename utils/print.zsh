@@ -21,26 +21,26 @@ function text() {
     printf "${1}"
 }
 
-function red_title() {
+function red() {
     title "${RED}" "${1}"
 }
 
-function green_title() {
+function green() {
     title "${GREEN}" "${1}"
 }
 
-function yellow_title() {
+function yellow() {
     title "${YELLOW}" "${1}"
 }
 
-function blue_title() {
+function blue() {
     title "${BLUE}" "${1}"
 }
 
-function magenta_title() {
+function magenta() {
     title "${MAGENTA}" "${1}"
 }
 
-function yellow_text() {
+function yellow() {
     text "${YELLOW}" "${1}"
 }
