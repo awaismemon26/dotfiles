@@ -1,7 +1,7 @@
 [user]
 	name = Awais Memon
 	email = awaismemon26@gmail.com
-	signingkey = 4C866CDFFECB83A4C5B1DC7D59EC3FD1B62807CE
+	# signingkey = 4C866CDFFECB83A4C5B1DC7D59EC3FD1B62807CE
 [merge]
 	tool = opendiff
 [diff]
@@ -13,14 +13,14 @@
 [core]
 	editor = code --wait
 [commit]
-	gpgsign = true
-[gpg]
-	program = gpg
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/local/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/local/bin/gh auth git-credential
+	gpgsign = false
+# [gpg]
+# 	program = gpg
+# [credential "https://github.com"]
+# 	helper = 
+# 	helper = !/usr/local/bin/gh auth git-credential
+# [credential "https://gist.github.com"]
+# 	helper = 
+# 	helper = !/usr/local/bin/gh auth git-credential
 [pull]
 	rebase = true

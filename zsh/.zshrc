@@ -15,7 +15,7 @@ fi
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/awaismemon/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -38,14 +38,13 @@ DEFAULT_USER=$(whoami)
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -93,7 +92,7 @@ DEFAULT_USER=$(whoami)
 # copyfile -- copy contents of a file to clipboard
 # copybuffer - control + o will copy current command on terminal to your clipboard
 # dirhistory -- you can navigate directories by pressing 
-plugins=(macos git virtualenv zsh-autosuggestions zsh-syntax-highlighting kubectl sudo copypath copyfile copybuffer dirhistory)
+plugins=(git virtualenv zsh-autosuggestions zsh-syntax-highlighting kubectl sudo copypath copyfile copybuffer dirhistory)
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status background_jobs)
 
@@ -124,18 +123,19 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status background_jobs)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Auto Complete 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 #####################################################################################################
 #                                           GOOGLE CLOUD SDK
 #####################################################################################################
 # The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 # The next lines enables bash completion in Zsh for gcloud. 
 autoload -U compinit compdef
 compinit
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
@@ -151,8 +151,8 @@ export PATH="/usr/local/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+# export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+# export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # Remove cleanup right after installing packages
 export HOMEBREW_NO_INSTALL_CLEANUP=1
@@ -185,8 +185,8 @@ source ~/.aliases
 # Java 17.0.12 is already symlinked with /Library/Java/JavaVirtualMachines/openjdk.jdk
 # You can also export openjdk 11 path to use it
 
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+#export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+#export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
 # -------
 #  /usr/local/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home
 # sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
@@ -201,12 +201,12 @@ export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 #####################################################################################################
 #                                                  KUBECTL PLUGIN (KREW)
-export PATH="${PATH}:${HOME}/.krew/bin"
+# export PATH="${PATH}:${HOME}/.krew/bin"
 
-export GPG_TTY=$(tty)
+# export GPG_TTY=$(tty)
 
-########################################## LINKERD #############################################
-export PATH=$PATH:/Users/awaismemon/.linkerd2/bin
+# ########################################## LINKERD #############################################
+# export PATH=$PATH:/Users/awaismemon/.linkerd2/bin
 
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
-[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
+# # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+# [[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh

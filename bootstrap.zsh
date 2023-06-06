@@ -29,21 +29,23 @@ green "Dotfile path: ${DOTDIR}"
 
 magenta "Installing Homebrew"
 (
-    if [[ $(command -v brew) == "" ]]; then
-        echo "Homebrew not present, downloading and installing..."
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    if ! command -v brew &> /dev/null; then
+	echo "Homebrew not present, downloading and installing..."
+	export HOMEBREW_NO_INSTALL_FROM_API=1 && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        eval "$(/opt/homebrew/bin/brew shellenv)" >> $HOME/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     else
         echo "Homebrew already present, skipping installation"
     fi
 )
 
-magenta "Update HomeBrew"
+magenta "Updating and cleaning up HomeBrew"
 (
-    read  "?Would you like to update brew ? (Y/N):? " confirm
+    read  "?Would you like to update and clean brew ? (Y/N):? " confirm
     if [[ $confirm == "y" ]]; then
-        brew update
+        brew update --ignore-pinned && brew cleanup && brew doctor # ignore pinned formulas -- brew list --pinned
     else
-       echo "Brew update skipped" 
+       echo "Update and cleanup skipped" 
     fi
 )
 

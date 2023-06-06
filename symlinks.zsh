@@ -41,11 +41,11 @@ magenta "SSH config"
 )
 magenta "VSCode config files"
 (
-    set -x
+    #set -x
     # stow vscode --adopt
     
     if [[ ! -e "$HOME/Library/Application Support/Code/User/settings.json" ]]; then
-        touch $HOME/Library/Application Support/Code/User/settings.json
+        touch "$HOME/Library/Application Support/Code/User/settings.json"
     fi
     ln -sf "$DOTDIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 )
