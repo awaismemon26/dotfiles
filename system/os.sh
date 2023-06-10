@@ -1,6 +1,3 @@
-## https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-
-
 # Show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
 

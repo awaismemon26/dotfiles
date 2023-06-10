@@ -32,18 +32,13 @@
     make link
     ```
 
-## Hammerspoon
+## [Hammerspoon](https://www.hammerspoon.org/)
 
 Hammerspoon is a desktop automation tool for macOS. It bridges various system level APIs into a Lua scripting engine, allowing you to have powerful effects on your system by writing Lua scripts.
 
 ## Resources
 
 - [Using GNU Stow to manage your dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)
-- <https://github.com/xero/dotfiles>
-- <https://github.com/shakeelmohamed/stow-dotfiles>
-- <https://github.com/alrra/dotfiles>
-- <https://github.com/paulirish/dotfiles>
-- <https://github.com/marcomicera/dotfiles>
 - <https://dotfiles.github.io/>
 
 `

@@ -1,7 +1,6 @@
 [user]
 	name = Awais Memon
 	email = awaismemon26@gmail.com
-	# signingkey = 4C866CDFFECB83A4C5B1DC7D59EC3FD1B62807CE
 [merge]
 	tool = opendiff
 [diff]
@@ -13,9 +12,9 @@
 [core]
 	editor = code --wait
 [commit]
-	gpgsign = false
-# [gpg]
-# 	program = gpg
+	gpgsign = true
+[gpg]
+	program = gpg
 # [credential "https://github.com"]
 # 	helper = 
 # 	helper = !/usr/local/bin/gh auth git-credential

@@ -197,13 +197,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
+# export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 #####################################################################################################
 #                                                  KUBECTL PLUGIN (KREW)
 # export PATH="${PATH}:${HOME}/.krew/bin"
 
-# export GPG_TTY=$(tty)
+export GPG_TTY=$(tty)
 
 # ########################################## LINKERD #############################################
 # export PATH=$PATH:/Users/awaismemon/.linkerd2/bin
