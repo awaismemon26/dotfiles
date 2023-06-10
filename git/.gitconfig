@@ -1,6 +1,7 @@
 [user]
 	name = Awais Memon
 	email = awaismemon26@gmail.com
+	signingkey = 762D701310D62930
 [merge]
 	tool = opendiff
 [diff]
