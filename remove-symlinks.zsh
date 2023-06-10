@@ -17,7 +17,6 @@ green "Removing Symlinks -> Dotfiles: ${DOTDIR} -> ~/"
 
 magenta "ZSH config files"
 (
-    # More details on operations performed
     set -x                              
     stow -D zsh
 )

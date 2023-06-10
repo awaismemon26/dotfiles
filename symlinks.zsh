@@ -42,7 +42,7 @@ magenta "SSH config"
 magenta "VSCode config files"
 (
     #set -x
-    # stow vscode --adopt
+    # stow vscode --adopt # We don't want to sync extensions, only settings.json
     
     if [[ ! -e "$HOME/Library/Application Support/Code/User/settings.json" ]]; then
         touch "$HOME/Library/Application Support/Code/User/settings.json"
