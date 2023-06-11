@@ -13,8 +13,6 @@ jobs:
       - name: gitleaks-action
         id: gitleaks
         uses: zricethezav/gitleaks-action@master
-        with:
-          fail: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_ENABLE_COMMENTS: true
