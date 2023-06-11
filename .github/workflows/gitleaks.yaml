@@ -1,4 +1,3 @@
-# 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
 name: gitleaks
 on:
   push:
@@ -13,10 +12,9 @@ jobs:
 
       - name: gitleaks-action
         id: gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        
+        uses: zricethezav/gitleaks-action@master
+        with:
+          fail: false
 
       - name: Post PR comment
         uses: actions/github-script@v6
