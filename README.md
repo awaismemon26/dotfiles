@@ -39,3 +39,4 @@ Hammerspoon is a desktop automation tool for macOS. It bridges various system le
 - [Using GNU Stow to manage your dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)
 - <https://dotfiles.github.io/>
 - [Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement)
+- [MacOS defaults](https://macos-defaults.com/)
