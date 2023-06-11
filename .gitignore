@@ -1,3 +1,4 @@
 # Any file or directory that starts with __
 /__*
 TODO.md
+.DS_Store
