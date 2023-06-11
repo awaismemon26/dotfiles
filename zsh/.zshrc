@@ -172,6 +172,21 @@ source ~/.functions
 
 source ~/.aliases
 
+
+#####################################################################################################
+#                                                   OPENSSL
+#####################################################################################################
+# # openssl@3 is keg-only, which means it was not symlinked into /opt/homebrew, because macOS provides LibreSSL.
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH" # need to have openssl@3 first in your PATH
+# # For compilers to find openssl@3 you may need to set
+# export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+
+# # For pkg-config to find openssl@3 you may need to set
+# export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
+
+
+
 #####################################################################################################
 #                                                   JAVA
 #####################################################################################################
