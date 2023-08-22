@@ -38,5 +38,8 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "editor.formatOnSaveMode": "modifications"
+    "editor.formatOnSaveMode": "modifications",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    }
 }
