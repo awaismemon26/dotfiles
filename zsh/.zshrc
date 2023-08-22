@@ -1,4 +1,5 @@
-
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 #####################################################################################################
 #                               ZSH Configuration - Powerlevel10k
 #####################################################################################################
@@ -225,3 +226,6 @@ export GPG_TTY=$(tty)
 
 # # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 # [[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
