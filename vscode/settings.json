@@ -38,6 +38,5 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "editor.formatOnSaveMode": "modifications",
-    "window.zoomLevel": 1
+    "editor.formatOnSaveMode": "modifications"
 }
