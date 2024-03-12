@@ -8,3 +8,7 @@ function dockerclean(){
     docker system prune --all -f
     
 }
+
+function dirsize(){
+    du -ah "$1" | sort -rh | head -n 20
+}
