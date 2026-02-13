@@ -16,3 +16,7 @@ alias gitfilesearchincommits="git log --all --full-history --"
 
 # testing image
 alias kubectlshell="kubectl run -i --tty --rm --image praqma/network-multitool test-shell -- /bin/bash"
+
+# corporate vpn
+alias kill-zscaler="find /Library/LaunchAgents -name '*zscaler*' -exec launchctl unload {} \;;sudo find /Library/LaunchDaemons -name '*zscaler*' -exec launchctl unload {} \;"
+alias open-zscaler="open -a /Applications/Zscaler/Zscaler.app --hide; sudo find /Library/LaunchDaemons -name '*zscaler*' -exec launchctl load {} \;"

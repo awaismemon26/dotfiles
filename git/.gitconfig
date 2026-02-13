@@ -1,5 +1,6 @@
 [user]
 	name = Awais Memon
+	email = awaismemon26@gmail.com
 [merge]
 	tool = opendiff
 [diff]
@@ -11,7 +12,7 @@
 [core]
 	editor = code --wait
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = gpg
 # [credential "https://github.com"]

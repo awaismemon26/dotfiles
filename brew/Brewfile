@@ -1,30 +1,59 @@
 tap "adoptopenjdk/openjdk"
+tap "azure/functions"
+tap "confluentinc/tap"
 tap "env0/terratag"
 tap "googlecontainertools/kpt", "https://github.com/GoogleContainerTools/kpt.git"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
-tap "jesseduffield/lazygit"
-tap "minamijoyo/tfupdate"
+tap "thecasualcoder/stable"
 tap "warrensbox/tap"
+# Mozilla CA certificate store
+brew "ca-certificates"
+# Mozilla CA bundle for Python
+brew "certifi"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Cryptographic recipes and primitives for Python
+brew "cryptography"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # New file format for still image compression
 brew "jpeg-xl"
-# Companion library to apr, the Apache Portable Runtime library
-brew "apr-util"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
+# Core application library for C
+brew "glib"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@77"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Engine for large-scale data processing
+brew "apache-spark"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Development kit for the Java programming language
+brew "openjdk"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
+# Platform built on V8 to build network applications
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
 # Freely available high-quality data compressor
 brew "bzip2"
 # Cross-platform make
@@ -33,14 +62,16 @@ brew "cmake"
 brew "conftest"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Configurable talking characters in ASCII art
-brew "cowsay"
-# Open source suite of directory software
-brew "openldap"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
+# Tool for exploring each layer in a docker image
+brew "dive"
+# .NET Core
+brew "dotnet"
 # View disk space usage and delete unwanted data, fast
 brew "dua-cli"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
@@ -57,6 +88,8 @@ brew "libavif"
 brew "gd"
 # GitHub command-line tool
 brew "gh"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Audit git repos for secrets
@@ -73,18 +106,30 @@ brew "libgcrypt"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Image manipulation
+brew "netpbm"
+# GNU triangulated surface library
+brew "gts"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Kubernetes package manager
 brew "helm"
-# Development kit for the Java programming language
-brew "openjdk@11"
+# Cost estimates for Terraform
+brew "infracost"
+# Command-line pager for JSON data
+brew "jless"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Easy way to access the system keyring service from python
+brew "keyring"
 # Run local Kubernetes cluster in Docker
 brew "kind"
-# Network authentication protocol
-brew "krb5"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
 # LastPass command-line interface tool
@@ -111,8 +156,6 @@ brew "mackup"
 brew "make"
 # Run a Kubernetes cluster locally
 brew "minikube"
-# Platform built on V8 to build network applications
-brew "node@16"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # 'traceroute' and 'ping' in a single tool
@@ -120,23 +163,37 @@ brew "mtr"
 # Open source relational database management system
 brew "mysql"
 # Platform built on V8 to build network applications
-brew "node"
+brew "node@16"
+# Manage multiple Node.js versions
+brew "nvm"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
 # Development kit for the Java programming language
-brew "openjdk"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+brew "openjdk@11"
 # General-purpose scripting language
 brew "php"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Tool for managing OCI containers and pods
+brew "podman"
+# Alternative to docker-compose using podman
+brew "podman-compose"
+# Python package management tool
+brew "poetry"
 # Object-relational database system
 brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Python version management
 brew "pyenv"
+# Easily download, build, install, upgrade, and uninstall Python packages
+brew "python-setuptools"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Checks infrastructure as code templates using Open Policy Agent/Rego
 brew "regula"
 # Search tool like grep and The Silver Searcher
@@ -149,8 +206,12 @@ brew "stow"
 brew "telnet"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
+# CLI tool to generate terraform files from existing infrastructure
+brew "terraformer"
 # Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
+# Managing Terraform stacks with change detections and code generations
+brew "terramate"
 # Detect compliance and security violations across Infrastructure as Code
 brew "terrascan"
 # Linter for Terraform files
@@ -159,54 +220,67 @@ brew "tflint"
 brew "tfsec"
 # Update version constraints in your Terraform configurations
 brew "tfupdate"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Internet file retriever
 brew "wget"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Azure Functions Core Tools 4.0
+brew "azure/functions/azure-functions-core-tools@4"
+# CLI for Confluent Cloud and Confluent Platform
+brew "confluentinc/tap/cli"
 # Automatically create and maintain tags across their entire set of AWS, Azure, and GCP resources on Terraform
 brew "env0/terratag/terratag"
-# Toolkit to manage,and apply Kubernetes Resource config data files
-brew "googlecontainertools/kpt/kpt"
+# Packer
+brew "hashicorp/tap/packer"
 # Terraform
-brew "hashicorp/tap/terraform", link: false
+brew "hashicorp/tap/terraform"
+# A command-line utility to print the summary of the terraform plan
+brew "thecasualcoder/stable/tf-summarize"
 # The tfswitch command lets you switch between terraform versions.
 brew "warrensbox/tap/tfswitch"
 # The tgswitch command lets you switch between terragrunt versions.
 brew "warrensbox/tap/tgswitch"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
 # Application launcher and productivity software
-cask "alfred"
+cask "alfred@4"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Memory training application
 cask "anki"
 # Allows connection to a computer remotely
 cask "anydesk"
-# Two-factor authentication software
-cask "authy"
+# Open-source project and knowledge management tool
+cask "appflowy"
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
+# Desktop password and login vault
+cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Clipboard extension app
 cask "clipy"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Database version management tool
 cask "dbngin"
 # Voice and text chat software
 cask "discord"
 # Data recovery software
 cask "disk-drill"
-# App to build and share containerized applications and microservices
-cask "docker"
+# Online diagram software
+cask "drawio"
 # Web browser
 cask "firefox"
-# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
-# Web browser
-cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Client for the Google Drive storage service
@@ -221,24 +295,34 @@ cask "lens"
 cask "logseq"
 # Molecular evolution statistical analysis and construction of phylogenetic trees
 cask "mega"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Explorer for Azure Storage
+cask "microsoft-azure-storage-explorer"
+# Email client
+cask "microsoft-outlook"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Minimal browser that protects privacy
-cask "min"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
+# Re-mounts write-protected NTFS volumes
+cask "mounty"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Calendar for professionals and teams
+cask "notion-calendar"
 # Icon manager and library
 cask "nucleo"
 # Calculator and converter application
 cask "numi"
-# GitLab mirror - Graphical OpenConnect client (beta phase)
-cask "openconnect-gui"
-# Client program for the OpenVPN Access Server
-cask "openvpn-connect"
-# Administration and development platform for PostgreSQL
-cask "pgadmin4"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
+# Collaboration platform for API development
+cask "postman"
 # Command-line shell and scripting language
 cask "powershell"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -249,7 +333,105 @@ cask "slack"
 cask "spotify"
 # Text editor for code, markup and prose
 cask "sublime-text"
+# Mesh VPN based on WireGuard
+cask "tailscale"
+# To-do list
+cask "todoist"
+# Charting and social-networking for investment traders
+cask "tradingview"
+# Very minimal GUI app that can write/read to disk images and USB drives
+cask "usbimager"
 # Development environment
 cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
+# Network protocol analyzer
+cask "wireshark"
+vscode "4ops.terraform"
+vscode "aaron-bond.better-comments"
+vscode "adpyke.codesnap"
+vscode "alefragnani.project-manager"
+vscode "almenon.arepl"
+vscode "apollographql.vscode-apollo"
+vscode "azurite.azurite"
+vscode "codium.codium"
+vscode "databricks.databricks"
+vscode "databricks.sqltools-databricks-driver"
+vscode "davidanson.vscode-markdownlint"
+vscode "docker.docker"
+vscode "donjayamanne.githistory"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "elagil.pre-commit-helper"
+vscode "esbenp.prettier-vscode"
+vscode "folke.vscode-monorepo-workspace"
+vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
+vscode "golang.go"
+vscode "grapecity.gc-excelviewer"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
+vscode "gruntfuggly.todo-tree"
+vscode "hashicorp.hcl"
+vscode "hashicorp.terraform"
+vscode "hediet.vscode-drawio"
+vscode "humao.rest-client"
+vscode "james-yu.latex-workshop"
+vscode "mechatroner.rainbow-csv"
+vscode "mhutchie.git-graph"
+vscode "mineiros.terramate"
+vscode "mohsen1.prettify-json"
+vscode "mquandalle.graphql"
+vscode "ms-azure-devops.azure-pipelines"
+vscode "ms-azuretools.vscode-azurefunctions"
+vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "ms-azuretools.vscode-azurestorage"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.csdevkit"
+vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-dotnettools.vscodeintellicode-csharp"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.datawrangler"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode-remote.vscode-remote-extensionpack"
+vscode "ms-vscode.azurecli"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-server"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "mtxr.sqltools"
+vscode "paiqo.databricks-vscode"
+vscode "plex.vscode-regolint"
+vscode "randomfractalsinc.vscode-data-table"
+vscode "rangav.vscode-thunder-client"
+vscode "redhat.vscode-yaml"
+vscode "richie5um2.vscode-sort-json"
+vscode "ritwickdey.liveserver"
+vscode "run-at-scale.terraform-doc-snippets"
+vscode "slevesque.vscode-zipexplorer"
+vscode "sonarsource.sonarlint-vscode"
+vscode "sourcegraph.cody-ai"
+vscode "tamasfe.even-better-toml"
+vscode "tsandall.opa"
+vscode "ty4z2008.html-preview"
+vscode "usernamehw.errorlens"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscode-icons-team.vscode-icons"
+vscode "withfig.fig"
+vscode "wizcloud.wiz-vscode"
+vscode "yzhang.markdown-all-in-one"

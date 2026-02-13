@@ -12,10 +12,10 @@
     "editor.rulers": [
         120
     ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true
-    },
-    "opa.path": "/Users/awaismemon/opa",
+    // "editor.codeActionsOnSave": {
+    //     "source.fixAll.markdownlint": "explicit"
+    // },
+    // "opa.path": "/Users/awaismemon/opa",
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "type": "line",
@@ -30,16 +30,102 @@
             "gutterIcon": true
         }
     },
-    "workbench.colorTheme": "Default Light Modern",
     "debug.terminal.clearBeforeReusing": true,
     "githubPullRequests.pullBranch": "never",
     "terminal.integrated.scrollback": 10000000000,
-    "diffEditor.ignoreTrimWhitespace": false,
     "[python]": {
         "editor.formatOnType": true
     },
     "editor.formatOnSaveMode": "modifications",
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
-    }
+    },
+    "projectManager.git.baseFolders": [
+        "~/documents"
+    ],
+    
+    // "typescript.updateImportsOnFileMove.enabled": "always",
+    
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.largeFileOptimizations": false,
+    "editor.multiCursorLimit": 100000,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "workbench.tree.enableStickyScroll": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "cody.telemetry.level": "off",
+    "cody.autocomplete.disableInsideComments": true,
+    "cody.autocomplete.formatOnAccept": true,
+    "cloudcode.autoDependencies": "off",
+    "go.toolsManagement.autoUpdate": true,
+    "sonarlint.rules": {
+        "go:S1192": {
+            "level": "off"
+        },
+        "python:S4830": {
+            "level": "off"
+        },
+        "python:S116": {
+            "level": "off"
+        },
+        "python:S5659": {
+            "level": "off"
+        },
+        "python:S1481": {
+            "level": "off"
+        },
+        "python:S1192": {
+            "level": "off"
+        },
+        "docker:S7031": {
+            "level": "off"
+        },
+        "python:S125": {
+            "level": "off"
+        },
+        "python:S117": {
+            "level": "off"
+        },
+        "python:S6662": {
+            "level": "off"
+        },
+        "python:S3358": {
+            "level": "off"
+        }
+    },
+    "sonarlint.pathToNodeExecutable": "/opt/homebrew/bin/node",
+    "cloudcode.project": "hmcp-devdz-inno-eco-de-prj-izk",
+    "python.analysis.extraPaths": [],
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-show-information-expiration": "2024-11-10T08:17:08.562Z"
+    },
+    "files.associations": {
+        "*.py": "python"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "debug.onTaskErrors": "abort",
+    "python.locator": "native",
+    "databricks.lastActiveConnection": "Databricks Extension",
+    "[graphql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "dataWrangler.debug": true,
+    "dataWrangler.useRelativePath": true,
+    "dataWrangler.experiments.autoDetectCsvDelimiter": true,
+    "git.openRepositoryInParentFolders": "never",
+    "azureFunctions.showPythonVenvWarning": false,
+    "diffEditor.maxComputationTime": 0,
+    "wiz.codePolicies.secrets": [
+        ""
+    ]
 }

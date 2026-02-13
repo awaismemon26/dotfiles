@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 #####################################################################################################
 #                               ZSH Configuration - Powerlevel10k
 #####################################################################################################
@@ -132,6 +130,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status background_jobs)
 #####################################################################################################
 # The next line updates PATH for the Google Cloud SDK.
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+
 # The next lines enables bash completion in Zsh for gcloud. 
 autoload -U compinit compdef
 compinit
@@ -141,6 +140,12 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 
+#####################################################################################################
+#                                           AZURE
+#####################################################################################################
+
+autoload bashcompinit && bashcompinit
+source $(brew --prefix)/etc/bash_completion.d/az
 
 #####################################################################################################
 #                                           PYENV CONFIGURATION
@@ -159,6 +164,7 @@ eval "$(pyenv init -)"
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 #####################################################################################################
 #                                                 FUNCTIONS
@@ -200,11 +206,11 @@ PATH=$PATH:/Users/muhammad.memon/bin
 # alias java8='export JAVA_HOME=$JAVA_8_HOME'
 # alias java17='export JAVA_HOME=$JAVA_17_HOME'
 
-# Java 17.0.12 is already symlinked with /Library/Java/JavaVirtualMachines/openjdk.jdk
-# You can also export openjdk 11 path to use it
+# # Java 17.0.12 is already symlinked with /Library/Java/JavaVirtualMachines/openjdk.jdk
+# # You can also export openjdk 11 path to use it
 
-#export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-#export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
 # -------
 #  /usr/local/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home
 # sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
@@ -229,5 +235,12 @@ export GPG_TTY=$(tty)
 # # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 # [[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
+
+fpath+=/opt/homebrew/share/zsh/site-functions
+autoload -Uz compinit && compinit
